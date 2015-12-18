@@ -2,6 +2,12 @@
 title: Elm FAQ
 layout: page
 ---
+**This document is obsolete.** It has been moved to
+[elm-community.github.io/elm-faq](http://elm-community.github.io/elm-faq/)
+and is being maintained there.
+
+---
+
 Here are some common questions that I've seen on the Elm IRC channel and on the mailing lists.
 Contributions to [this document](https://github.com/fredcy/elm-faq) are welcome.
 
