@@ -146,11 +146,23 @@ See also [Basics.elm](https://github.com/elm-lang/core/blob/master/src/Basics.el
 
 ### How can I use multiple Elm programs on the same page?
 
-You can compile multiple modules into a single elm.js and then instantiate whatever module you need on the appropriate div. [^multipleModules]
+You can compile multiple modules into a single elm.js and then instantiate whatever module you need on the appropriate div. [^multipleModules]  For example, bundle multiple main programs (without duplicating any code) into a single elm.js like this:
 
-    elm-make A.elm B.elm --output elm.js
+	elm-make Header.elm Footer.elm Login.elm --output=elm.js
+	
+and then use them like this:
 
-[^multipleModules]: Use of multiple main modules in one application is discussed [here](https://groups.google.com/d/msg/elm-discuss/eEJgNnl99ps/keWXnn1KCwAJ).
+	var headernode = document.getElementById('header');
+	var footernode = document.getElementById('footer');
+	var loginnode = document.getElementById('login');
+
+	Elm.Header.embed(headernode); 
+	Elm.Footer.embed(footernode); 
+	Elm.Login.embed(loginnode);  
+
+[^multipleModules]: Use of multiple main modules in one application is discussed
+    [here](https://groups.google.com/d/msg/elm-discuss/eEJgNnl99ps/keWXnn1KCwAJ)
+    and [here](https://www.reddit.com/r/elm/comments/5vh1fi/where_do_you_suffer_most_while_programming_in_elm/deb93ay/).
 
 
 ### Does the main module file have to be named "Main.elm"?
