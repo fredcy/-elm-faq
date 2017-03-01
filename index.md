@@ -486,21 +486,17 @@ Any module using ports must start with `port module` on the first line.
 
 ### How do I generate a new message as a command?
 
-The package [shmookey/cmd-extra](http://package.elm-lang.org/packages/shmookey/cmd-extra/latest) provides a function to construct a `Cmd` yielding an arbitrary value:
+The following function constructs a Cmd value from a message:
 
 ```haskell
-message : msg -> Cmd msg
+message : msg -> Cmd msg 
+message msg = 
+    Task.perform identity (Task.succeed msg)
 ```
 
 However, this is often unnecessary. To handle a message produced by a call to `update` you may pass it straight back to `update` recursively. The package [ccapndave/elm-update-extra](http://package.elm-lang.org/packages/ccapndave/elm-update-extra/latest) provides helper functions for implementing this approach elegantly. 
 
-The latter approach is likely to be more efficient in most cases. The former option may be attractive when recursive calls to `update` could cause an infinite loop, or for authors of reusable components interested in creating a clean encapsulation of their library's internal behaviour.
-
-Without using any libraries, you may simply create and perform a task that always succeeds with a given message:
-
-```haskell
-Task.perform (\_ -> Debug.crash "This failure cannot happen.") identity (Task.succeed Test)
-```
+The latter approach is likely to be more efficient in most cases. The former option may be attractive when recursive calls to `update` could cause an infinite loop, or for authors of reusable components interested in creating a clean encapsulation of their library's internal behavior.
 
 ### What is the difference between Cmd and Task?
 
