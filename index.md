@@ -380,6 +380,12 @@ f : number1 -> number2 -> String
 
 then it can also take an Int and a Float and return a String, or take a Float and an Int and return a String. The prefix gives the super-type that constrains the corresponding particular argument. The full super-type name, special prefix plus arbitrary (optional) suffix, determines whether the actual types have to be consistent.
 
+#### Why doesn't Elm have user-defined typeclasses?
+
+So far there have not been enough compelling cases to justify adding user-defined typeclasses to the language.
+See [compiler issue #1039](https://github.com/elm-lang/elm-compiler/issues/1039).
+
+
 ### Which special type variables are there, and how do they work?
 
 There are four special type vairables, which are `number`, `comparable`, `appendable`, and `compappend`. Please see question [Does Elm have ad-hoc polymorphism or typeclasses?](#does-elm-have-ad-hoc-polymorphism-or-typeclasses) for the details.
