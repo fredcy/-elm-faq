@@ -528,6 +528,9 @@ See [Building custom DOM event handlers in Elm](https://robots.thoughtbot.com/bu
 
 See the [Elm-community Manifesto](https://github.com/elm-community/Manifesto#mandate). The elm-community organization came about when some useful packages were no longer being maintained by their creators. The organization formed to make a new home for those packages. Elm-community packages are not inherently more reliable than others but are perhaps more likely to be supported in the long run. Elm-community packages are not a staging area for core. 
 
+### Can Elm be used when developing with SEO in mind? 
+
+Most crawlers should work fine with Elm rendered pages. Follow general [recommendations for JavaScript sites](https://plus.google.com/u/0/+JohnMueller/posts/LT4fU7kFB8W) (please note that, even if Googlebot does not support requestAnimationFrame, Elm's fallback handles most cases just fine). If you want to support crawlers that don't support any JS, investigate using [elm-server-side-renderer](https://github.com/eeue56/elm-server-side-renderer).  
 
 ## Footnotes
 
