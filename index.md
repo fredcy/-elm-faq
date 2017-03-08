@@ -532,5 +532,13 @@ See the [Elm-community Manifesto](https://github.com/elm-community/Manifesto#man
 
 Most crawlers should work fine with Elm rendered pages. Follow general [recommendations for JavaScript sites](https://plus.google.com/u/0/+JohnMueller/posts/LT4fU7kFB8W) (please note that, even if Googlebot does not support requestAnimationFrame, Elm's fallback handles most cases just fine). If you want to support crawlers that don't support any JS, investigate using [elm-server-side-renderer](https://github.com/eeue56/elm-server-side-renderer).  
 
-## Footnotes
+### What does the name "Elm" stand for?
+
+It's just a name, not an acronym, and it's not capitalized as "ELM" either.
+See this [elm-discuss message](https://groups.google.com/forum/#!msg/elm-discuss/S4zbHJWPXvU/JyavEHDDQucJ) for Evan's explanation of the name.[^elm-name]
+
+[^elm-name]: But I still think it's an anagram of *E*van's *ML*. [FCY]
+
+
+## Notes
 
