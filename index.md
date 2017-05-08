@@ -532,6 +532,15 @@ This is why APIs generally expose `Task` instances rather than `Cmd`:  so you ca
 
 See [Building custom DOM event handlers in Elm](https://robots.thoughtbot.com/building-custom-dom-event-handlers-in-elm) for some examples of event handlers.
 
+### What is the recommended way to organize modules, file system structure, etc.?
+
+There is not one definitive way to do it. Generally, a module in Elm is organized around a data structure relevant to the domain rather than abstracted functions (such as putting all your view or update functions together). See [Evan's recommendations here](https://www.reddit.com/r/elm/comments/69hwta/can_i_split_my_code_into_viewmodelupdate_folders/dh6szt9/). 
+
+  > I suspect the heart of a great module in Elm is a data structure. A type or type alias that represents some important and coherent concept. From there, you have functions for working with that data structure. A good test for which functions to include might be to ask: does this function make sense if I only read this module?
+
+For a more detailed approach to code organization for Single Page Applications (SPAs), check out [NoRedInk's style guide](https://github.com/NoRedInk/elm-style-guide).
+
+And for a fully worked example of a simple SPA, see [Richard Feldman's Elm implementation](https://github.com/rtfeldman/elm-spa-example) of the ["Realworld" app](https://github.com/gothinkster/realworld) and [his tour through it](https://dev.to/rtfeldman/tour-of-an-open-source-elm-spa).
 
 ### What is "elm-community"?
 
